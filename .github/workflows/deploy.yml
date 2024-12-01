@@ -20,11 +20,13 @@ jobs:
 
             - name: Prepare Go environment
               run: |
+                  cd cmd/website
                   go mod tidy
 
             - name: Build static site
               run: |
-                  go run ./cmd/website
+                  cd cmd/website
+                  go run main.go
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
