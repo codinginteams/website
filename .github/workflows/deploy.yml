@@ -14,23 +14,23 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v3
 
-            # Step 2: Set up Go
+            # Step 2: Remove Default Go Installation
+            - name: Remove Default Go Installation
+              run: |
+                  sudo rm -rf /usr/local/go
+                  sudo rm -rf /opt/hostedtoolcache/go
+
+            # Step 3: Set up Go
             - name: Set up Go
               uses: actions/setup-go@v4
               with:
                   go-version: 1.20
 
-            # Step 3: Debug Go Environment
-            - name: Debug Go Environment
+            # Step 4: Check Go Version After Setup
+            - name: Check Go Version After Setup
               run: |
                   go version
-                  go env
                   which go
-
-            # Step 4: Enable Go Modules
-            - name: Enable Go Modules
-              run: |
-                  export GO111MODULE=on
 
             # Step 5: Prepare the Go environment
             - name: Prepare Go environment
