@@ -10,24 +10,27 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            # Step 1: Checkout the repository
             - name: Checkout repository
               uses: actions/checkout@v3
 
+            # Step 2: Set up Go
             - name: Set up Go
               uses: actions/setup-go@v4
               with:
                   go-version: 1.20
 
+            # Step 3: Prepare the Go environment
             - name: Prepare Go environment
               run: |
-                  cd cmd/website
                   go mod tidy
 
+            # Step 4: Build the static site
             - name: Build static site
               run: |
-                  cd cmd/website
-                  go run main.go
+                  go run ./cmd/website
 
+            # Step 5: Deploy to GitHub Pages
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
               with:
