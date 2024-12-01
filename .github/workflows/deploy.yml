@@ -41,6 +41,7 @@ jobs:
             - name: Build static site
               run: |
                   go run ./cmd/website
+                  cp 404.html build/
 
             # Step 7: Deploy to GitHub Pages
             - name: Deploy to GitHub Pages
@@ -48,3 +49,4 @@ jobs:
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: ./build
+                  cname: www.codinginteams.com
