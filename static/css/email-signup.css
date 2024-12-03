@@ -1,0 +1,50 @@
+.email-signup {
+	margin-top: 2rem;
+}
+
+.email-signup pre {
+	background-color: #1e1e1e;
+	color: #d4d4d4;
+	padding: 1rem;
+	border-radius: 5px;
+	overflow: auto;
+	border: 1px solid #3c3c3c;
+}
+
+.email-signup .code {
+	color: #d4d4d4;
+}
+
+.email-signup input[type="email"] {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #3c3c3c;
+	color: #d4d4d4;
+	font-family: inherit;
+	font-size: inherit;
+	width: 50%;
+}
+
+.email-signup input[type="email"]::placeholder {
+	color: #6a9955;
+}
+
+.email-signup input[type="email"]:focus {
+	outline: none;
+	border-bottom-color: #c586c0;
+}
+
+.email-signup button {
+	margin-top: 1rem;
+	background-color: #0e639c;
+	color: #ffffff;
+	border: none;
+	padding: 0.5rem 1rem;
+	border-radius: 3px;
+	cursor: pointer;
+	font-family: "Fira Code", monospace;
+}
+
+.email-signup button:hover {
+	background-color: #1177bb;
+}
