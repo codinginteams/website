@@ -11,5 +11,11 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to generate site: %v", err)
 	}
-	log.Println("Site generated successfully!")
+
+	err = copyStaticFiles("static/css", "build/static/css")
+	if err != nil {
+		log.Fatalf("Failed to copy static files: %v", err)
+	}
+
+	log.Println("Site generated and static files copied successfully!")
 }

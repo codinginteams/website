@@ -1,0 +1,18 @@
+.mt-1 {
+	margin-top: 0.25rem;
+}
+.mt-2 {
+	margin-top: 0.5rem;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.bg-primary {
+	background-color: #007bff;
+}
+.text-muted {
+	color: #6c757d;
+}

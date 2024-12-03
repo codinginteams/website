@@ -1,4 +1,4 @@
-# Welcome to Coding in TEAMS
+## Welcome to Coding in TEAMS
 
 **Coding in TEAMS** is all about creating:
 
